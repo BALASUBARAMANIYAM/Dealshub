@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Dealshub
 =======
 # Getting Started with Create React App
