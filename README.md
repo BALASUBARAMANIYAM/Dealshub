@@ -1,6 +1,6 @@
 # DealsHub – Smart Deal Aggregator
 
-DealsHub is an intelligent deal aggregation platform that automatically identifies and notifies users of personalized shopping deals from major e-commerce sites like Amazon, streamlining the savings process and enhancing user convenience.
+DealsHub is an intelligent deal aggregation platform that automatically identifies and notifies users of personalized shopping deals from major e-commerce sites like Amazon , FlipKart , streamlining the savings process and enhancing user convenience.
 
 ## Key Features
 
