@@ -60,25 +60,26 @@ DealsHub is an intelligent deal aggregation platform that automatically identifi
 
 ```
 dealshub/
-├── frontend/            # React application
-│   ├── public/          # Static files
-│   ├── src/             # React source code
-│   │   ├── assets/      # Images, fonts, etc.
-│   │   ├── components/  # Reusable UI components
-│   │   ├── pages/       # Page components
-│   │   ├── services/    # API services
-│   │   ├── store/       # State management
-│   │   ├── styles/      # Global styles
-│   │   ├── utils/       # Utility functions
-│   │   ├── App.js       # Main app component
-│   │   └── index.js     # App entry point
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── assets/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── services/
+│   │   ├── store/
+│   │   ├── styles/
+│   │   ├── utils/
+│   │   ├── App.js
+│   │   └── index.js
 │   └── package.json
-├── backend/             # Spring Boot application
-│   ├── src/             # Java source code
+├── backend/
+│   ├── src/
 │   └── pom.xml
-├── database/            # MySQL schemas and scripts
-├── docs/                # Project documentation
+├── database/
+├── docs/
 └── README.md
+
 ```
 
 ## Available Scripts (Frontend)
