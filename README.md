@@ -1,73 +1,161 @@
-# Dealshub
+# DealsHub – Smart Deal Aggregator
 
-# Getting Started with Create React App
+DealsHub is an intelligent deal aggregation platform that automatically identifies and notifies users of personalized shopping deals from major e-commerce sites like Amazon, streamlining the savings process and enhancing user convenience.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Key Features
 
-## Available Scripts
+- 🔍 **Smart Deal Aggregation**: Automatically collects deals from major e-commerce platforms
+- 🔔 **Personalized Notifications**: Alerts users about deals matching their preferences
+- 🛒 **Multi-platform Support**: Integrates with Amazon and other major retailers
+- 📊 **Deal Comparison**: Helps users find the best offers across platforms
+- 📱 **Responsive Design**: Works seamlessly across devices
 
-In the project directory, you can run:
+## Technologies Used
 
-### `npm start`
+**Frontend**:
+- ReactJS
+- HTML5, CSS3
+- JavaScript (ES6+)
+- Axios for API calls
+- React Router
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Backend**:
+- Spring Boot
+- MySQL Database
 
-### `npm test`
+**APIs & Services**:
+- RapidAPI for e-commerce integrations
+- Custom deal aggregation algorithms
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `npm run build`
+### Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Node.js (v16 or higher)
+- Java JDK (v11 or higher)
+- MySQL (v8.0 or higher)
+- npm (v8 or higher) or yarn
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/dealshub.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd dealshub
+   ```
+3. Install frontend dependencies:
+   ```bash
+   npm install
+   ```
+4. Set up backend:
+   - Configure MySQL database
+   - Update `application.properties` with your credentials
+   - Run Spring Boot application
 
-### `npm run eject`
+## Project Structure
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+dealshub/
+├── frontend/            # React application
+│   ├── public/          # Static files
+│   ├── src/             # React source code
+│   │   ├── assets/      # Images, fonts, etc.
+│   │   ├── components/  # Reusable UI components
+│   │   ├── pages/       # Page components
+│   │   ├── services/    # API services
+│   │   ├── store/       # State management
+│   │   ├── styles/      # Global styles
+│   │   ├── utils/       # Utility functions
+│   │   ├── App.js       # Main app component
+│   │   └── index.js     # App entry point
+│   └── package.json
+├── backend/             # Spring Boot application
+│   ├── src/             # Java source code
+│   └── pom.xml
+├── database/            # MySQL schemas and scripts
+├── docs/                # Project documentation
+└── README.md
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Available Scripts (Frontend)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+In the frontend directory, you can run:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+npm start
+```
+Runs the app in development mode. Open http://localhost:3000 to view it in your browser.
 
-## Learn More
+```bash
+npm test
+```
+Launches the test runner in interactive watch mode.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+npm run build
+```
+Builds the app for production to the build folder.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm run eject
+```
+**Note:** this is a one-way operation. Ejects from Create React App to customize configuration.
 
-### Code Splitting
+## Environment Variables
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+**Frontend (.env):**
+```env
+REACT_APP_API_BASE_URL=http://localhost:8080/api
+REACT_APP_RAPIDAPI_KEY=your_rapidapi_key
+```
 
-### Analyzing the Bundle Size
+**Backend (application.properties):**
+```properties
+spring.datasource.url=jdbc:mysql://localhost:3306/dealshub
+spring.datasource.username=db_username
+spring.datasource.password=db_password
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Deployment
 
-### Making a Progressive Web App
+**Frontend:**
+```bash
+npm run build
+```
+Deploy the build folder to your preferred hosting (Netlify, Vercel, etc.)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+**Backend:**
+Package as JAR file:
+```bash
+mvn clean package
+```
+Deploy to your preferred cloud service (AWS, Heroku, etc.)
 
-### Advanced Configuration
+## API Documentation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+The backend exposes the following main endpoints:
 
-### Deployment
+- `GET /api/deals` – Get all deals
+- `POST /api/deals/search` – Search deals with filters
+- `GET /api/users/preferences` – Get user preferences
+- `PUT /api/users/preferences` – Update user preferences
+- `GET /api/notifications` – Get user notifications
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Contributing
 
-### `npm run build` fails to minify
+We welcome contributions! Please follow these guidelines:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
->>>>>>> ae94e0e (Initialize project using Create React App)
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
